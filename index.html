@@ -1,374 +1,57 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#174d32">
-<title>PRASANN | Pure Taste, Pure Happiness</title>
-<meta name="description" content="Discover PRASANN Kaju Shape Snacks. Choose your pack and order on WhatsApp.">
-
+<!doctype html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#174b35"><title>PRASANN | Pure Taste, Pure Happiness</title>
 <style>
-:root {
-  --green: #174d32;
-  --dark: #103522;
-  --orange: #f28c28;
-  --cream: #fff8e9;
-  --white: #ffffff;
-  --text: #26352a;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.6;
-}
-button, input, select { font: inherit; }
-button, a { -webkit-tap-highlight-color: transparent; }
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; }
-
-header {
-  background: var(--green);
-  color: white;
-  padding: 14px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 3px 15px #0002;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 25px;
-  font-weight: 900;
-}
-.brand img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  background: white;
-  border-radius: 50%;
-}
-.brand span { color: var(--orange); }
-nav { display: flex; flex-wrap: wrap; gap: 18px; }
-nav a { font-weight: 600; }
-nav a:hover { color: #ffd39b; }
-
-.hero {
-  padding: 55px 6%;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: 35px;
-  background: linear-gradient(135deg, #fff8e9, #f9e8c7);
-}
-.eyebrow {
-  color: var(--green);
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-h1 {
-  font-size: clamp(38px, 6vw, 66px);
-  line-height: 1.08;
-  color: var(--green);
-  margin: 15px 0;
-}
-h1 span, .orange { color: var(--orange); }
-.hero p { font-size: 19px; color: #526054; }
-.hero-logo {
-  width: 100%;
-  max-width: 420px;
-  display: block;
-  margin: auto;
-  border-radius: 22px;
-  mix-blend-mode: multiply;
-}
-.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
-.btn {
-  display: inline-block;
-  border: 0;
-  border-radius: 40px;
-  padding: 13px 22px;
-  background: var(--green);
-  color: white;
-  font-weight: 800;
-  cursor: pointer;
-}
-.btn.orange-btn { background: var(--orange); color: #222; }
-.btn:hover { opacity: .88; }
-
-section { padding: 48px 6%; }
-.section-title { text-align: center; margin-bottom: 28px; }
-.section-title h2 { color: var(--green); font-size: clamp(28px, 4vw, 40px); margin: 0; }
-.section-title p { color: #667064; }
-
-.search-wrap { max-width: 550px; margin: 0 auto 28px; }
-.search-wrap input {
-  width: 100%;
-  padding: 14px 18px;
-  border: 1px solid #d9ddcf;
-  border-radius: 30px;
-  background: white;
-  outline-color: var(--green);
-}
-.products {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-.card {
-  background: white;
-  border: 1px solid #eee4d4;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px #193b2110;
-}
-.card-content { padding: 20px; }
-.product-art {
-  min-height: 170px;
-  display: grid;
-  place-items: center;
-  background: #f6ead2;
-  font-size: 70px;
-}
-.card h3 { color: var(--green); margin: 0 0 6px; }
-.card p { color: #667064; margin-top: 5px; }
-.card select {
-  width: 100%;
-  padding: 11px;
-  margin: 8px 0 12px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: white;
-}
-.card .btn { width: 100%; text-align: center; }
-
-.menu-section { background: #f5ecd9; }
-.menu-image {
-  display: block;
-  width: 100%;
-  max-width: 760px;
-  margin: auto;
-  border-radius: 18px;
-  box-shadow: 0 8px 28px #0001;
-}
-.about {
-  background: var(--green);
-  color: white;
-  text-align: center;
-}
-.about h2 { color: #ffd39b; }
-.about p { max-width: 700px; margin: 12px auto; }
-
-.contact-card {
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
-  background: white;
-  border-radius: 20px;
-  padding: 28px;
-  border: 1px solid #eee4d4;
-}
-footer {
-  background: var(--dark);
-  color: white;
-  padding: 25px 6%;
-  text-align: center;
-}
-footer p { margin: 5px; color: #e6eddf; }
-.hidden { display: none !important; }
-
-@media (max-width: 760px) {
-  header { justify-content: center; }
-  nav { justify-content: center; gap: 13px; }
-  .hero { grid-template-columns: 1fr; padding: 38px 6%; }
-  .hero-logo { max-width: 300px; }
-  .products { grid-template-columns: 1fr; }
-  section { padding: 38px 5%; }
-}
-</style>
-</head>
-
-<body>
-<header>
-  <a class="brand" href="#home">
-    <img src="file_000000001104820bbb8de0c9b70bad8c.png"
-         alt="PRASANN Logo">
-    <div>PRAS<span>ANN</span></div>
-  </a>
-  <nav aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#menu">Our Menu</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main>
-<section class="hero" id="home">
-  <div>
-    <div class="eyebrow">Welcome to PRASANN</div>
-    <h1>Pure Taste.<br><span>Pure Happiness.</span></h1>
-    <p>
-      Discover our Kaju Shape Snacks and choose your favourite pack.
-      Simple ordering, friendly service, and a taste to share.
-    </p>
-    <div class="actions">
-      <a class="btn" href="#products">Explore Products</a>
-      <a class="btn orange-btn" href="#contact">Contact Us</a>
-    </div>
-  </div>
-  <img class="hero-logo"
-       src="file_000000001104820bbb8de0c9b70bad8c.png"
-       alt="PRASANN Pure Taste Pure Happiness">
-</section>
-
-<section id="products">
-  <div class="section-title">
-    <h2>Our Snacks</h2>
-    <p>Choose your pack size and order directly.</p>
-  </div>
-
-  <div class="search-wrap">
-    <input id="search" type="search"
-           placeholder="Search snacks..."
-           aria-label="Search products">
-  </div>
-
-  <div class="products" id="product-list">
-    <article class="card" data-name="Kaju Shape Snacks">
-      <div class="product-art" aria-label="Snack illustration">🥨</div>
-      <div class="card-content">
-        <h3>Kaju Shape Snacks</h3>
-        <p>Crispy, tasty snacks made for sharing.</p>
-        <label for="size1">Choose pack size</label>
-        <select id="size1">
-          <option value="150 g">150 g</option>
-          <option value="300 g">300 g</option>
-          <option value="500 g">500 g</option>
-          <option value="1 kg">1 kg</option>
-        </select>
-        <button class="btn" onclick="orderProduct('size1')">
-          Order on WhatsApp
-        </button>
-      </div>
-    </article>
-
-    <article class="card" data-name="PRASANN Snack Menu">
-      <div class="product-art" aria-label="Menu illustration">🍘</div>
-      <div class="card-content">
-        <h3>Explore Our Menu</h3>
-        <p>See the PRASANN menu for more snack varieties.</p>
-        <a class="btn" style="display:block" href="#menu">View Menu</a>
-      </div>
-    </article>
-
-    <article class="card" data-name="New Snacks">
-      <div class="product-art" aria-label="New products">🌿</div>
-      <div class="card-content">
-        <h3>More Coming Soon</h3>
-        <p>More PRASANN products will be added soon.</p>
-        <a class="btn" style="display:block" href="#contact">Ask Us</a>
-      </div>
-    </article>
-  </div>
-  <p id="no-results" class="hidden" style="text-align:center">
-    No matching products found.
-  </p>
-</section>
-
-<section class="menu-section" id="menu">
-  <div class="section-title">
-    <h2>Our Menu</h2>
-    <p>Take a look at the PRASANN menu.</p>
-  </div>
-  <img class="menu-image"
-       src="file_0000000050fc81fa87d09165cf3b6474.png"
-       alt="PRASANN snacks menu">
-</section>
-
-<section class="about" id="about">
-  <h2>About PRASANN</h2>
-  <p>
-    PRASANN brings people together through the joy of snacks.
-    Our promise is simple: Pure Taste, Pure Happiness.
-  </p>
-</section>
-
-<section id="contact">
-  <div class="section-title">
-    <h2>Contact PRASANN</h2>
-    <p>Want to order or ask about our products?</p>
-  </div>
-  <div class="contact-card">
-    <h3>We'd love to hear from you!</h3>
-    <p>Place your order or ask us about pack sizes on WhatsApp.</p>
-    <button class="btn" onclick="contactWhatsApp()">Chat on WhatsApp</button>
-  </div>
-</section>
-</main>
-
-<footer>
-  <strong>PRASANN</strong>
-  <p>Pure Taste ❤️ Pure Happiness</p>
-  <p>© <span id="year"></span> PRASANN. All rights reserved.</p>
-</footer>
-
+:root{--g:#174b35;--o:#e7792b;--c:#fff7e8;--p:#fffdf8;--line:#e9dfce;--m:#74756b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--p);color:#292a22;font:15px/1.55 system-ui,Arial}button,input,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}.top{background:var(--g);color:white;text-align:center;padding:8px;font-size:12px}.nav{position:sticky;top:0;z-index:5;background:#fffdf8ed;backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px max(18px,calc((100% - 1120px)/2));border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px}.brand img{width:52px;height:52px;object-fit:contain}.brand b{display:block;font:800 23px Georgia,serif;letter-spacing:2px;color:var(--g)}.brand small{font-size:10px;color:var(--o);font-weight:800}.links{display:flex;gap:17px;font-size:12px;font-weight:700}.btn{border:0;border-radius:99px;padding:11px 17px;font-size:12px;font-weight:850}.green{background:var(--g);color:white}.orange{background:var(--o);color:white}.hero{background:linear-gradient(120deg,#fff0d5,#fffaf0 60%,#f1e4cb)}.hero-in{max-width:1120px;margin:auto;padding:48px 22px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.eyebrow,.kicker{color:var(--o);font-size:11px;font-weight:900;letter-spacing:1.5px}.hero h1{font:700 clamp(40px,5vw,65px)/1.05 Georgia,serif;color:var(--g);margin:17px 0}.hero h1 em{color:var(--o);font-style:normal}.hero p{color:#66685e;line-height:1.9}.hero-img{height:350px;width:100%;object-fit:cover;border:7px solid white;border-radius:45% 45% 20px 20px;box-shadow:0 20px 40px #3332;background:#eee0c5}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.section{max-width:1120px;margin:auto;padding:55px 22px}.heading{text-align:center;margin:0 auto 26px;max-width:650px}.heading h2,.about h2{font:700 clamp(29px,4vw,42px)/1.1 Georgia,serif;color:var(--g);margin:9px 0}.heading p,.muted{color:var(--m);font-size:13px}.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.cat{background:white;border:1px solid var(--line);border-radius:17px;padding:17px 7px;text-align:center}.cat.active,.cat:hover{background:#edf3e9;border-color:var(--g)}.cat span{font-size:29px;display:block}.cat b{font-size:12px;color:var(--g)}.menu{background:var(--c)}.menu-top{display:flex;justify-content:space-between;align-items:end;gap:15px}.menu-top .heading{text-align:left;margin:0 0 22px}.search{border:1px solid var(--line);border-radius:99px;padding:12px 15px;width:min(310px,100%);background:white}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0 22px}.filter{border:1px solid var(--line);border-radius:99px;padding:8px 13px;background:white;font-size:11px;font-weight:800}.filter.active{background:var(--g);color:white}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.product{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}.foodpic{height:140px;background:linear-gradient(135deg,#f4e4c3,#e9d5ac);display:grid;place-items:center;position:relative;font-size:56px}.tag{position:absolute;top:9px;left:9px;background:white;color:var(--g);font-size:9px;padding:5px 8px;border-radius:99px;font-weight:900}.info{padding:13px;display:flex;flex-direction:column;flex:1}.info small{color:var(--o);font-size:9px;font-weight:900;text-transform:uppercase}.info h3{font:700 17px Georgia,serif;color:var(--g);margin:4px 0}.info p{font-size:11px;color:var(--m);min-height:32px;margin:0 0 8px}.size{width:100%;border:1px solid var(--line);border-radius:9px;background:#fffdf8;padding:8px;font-size:11px;margin-bottom:10px}.price-row{display:flex;justify-content:space-between;align-items:center;gap:7px;margin-top:auto}.price{color:var(--g);font-size:16px;font-weight:900}.add{background:var(--g);color:white;border:0;border-radius:99px;padding:8px 11px;font-size:11px;font-weight:850}.story{background:var(--g);color:white;text-align:center;padding:35px 20px}.story h2{font:700 32px Georgia,serif;margin:0 0 8px}.about-in{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}.about img{width:100%;max-height:300px;object-fit:contain;background:var(--c);padding:20px;border-radius:20px}.contact{background:#f7efdf}.contact-card{max-width:720px;margin:auto;text-align:center;padding:28px;background:white;border:1px solid var(--line);border-radius:22px}.footer{background:#123b2a;color:#e7eadf;padding:28px 22px;text-align:center;font-size:11px}.overlay{position:fixed;inset:0;background:#0008;z-index:10;display:none}.overlay.open{display:block}.drawer{position:fixed;right:0;top:0;height:100dvh;width:min(430px,100%);background:var(--p);z-index:11;transform:translateX(105%);transition:.2s;display:flex;flex-direction:column}.drawer.open{transform:none}.dhead,.dfoot{padding:16px;border-bottom:1px solid var(--line)}.dhead{display:flex;justify-content:space-between;align-items:center}.dhead h2{font:700 24px Georgia,serif;color:var(--g);margin:0}.close{border:1px solid var(--line);background:white;border-radius:50%;width:35px;height:35px}.items{overflow:auto;flex:1;padding:12px 16px}.cartrow{padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;font-size:12px}.cartrow b{color:var(--g)}.qty{display:flex;gap:8px;align-items:center;margin-top:7px}.qty button{border:1px solid var(--line);background:white;border-radius:50%;width:26px;height:26px}.dfoot{border-top:1px solid var(--line);border-bottom:0;background:white}.total{display:flex;justify-content:space-between;color:var(--g);font-weight:900;font-size:18px;margin-bottom:10px}.field{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;margin:4px 0;font-size:12px}.checkout{width:100%;background:#218c50;color:white;border:0;border-radius:11px;padding:13px;font-weight:900;margin-top:7px}.note{font-size:10px;color:var(--m)}.empty{grid-column:1/-1;text-align:center;color:var(--m);padding:30px}
+@media(max-width:800px){.links{gap:10px}.products{grid-template-columns:repeat(3,1fr)}.hero-in{gap:20px}.hero-img{height:290px}}
+@media(max-width:600px){.nav{padding:9px 12px;flex-wrap:wrap}.brand img{width:42px;height:42px}.brand b{font-size:19px}.links{order:3;flex-basis:100%;justify-content:space-between;font-size:11px}.hero-in{grid-template-columns:1fr;padding:35px 17px}.hero h1{font-size:44px}.hero-img{height:270px}.section{padding:42px 14px}.cats{grid-template-columns:repeat(2,1fr)}.menu-top{display:block}.menu-top .heading{text-align:left}.search{width:100%;margin-bottom:12px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.foodpic{height:115px;font-size:48px}.info{padding:10px}.info h3{font-size:15px}.info p{font-size:10px;min-height:40px}.price{font-size:14px}.add{padding:8px}.about-in{grid-template-columns:1fr}.story h2{font-size:27px}}
+</style></head><body>
+<div class="top">स्वाद जो दिल से बने • PRASANN में आपका स्वागत है ❤️</div>
+<header class="nav"><a class="brand" href="#home"><img src="file_000000001104820bbb8de0c9b70bad8c.png" alt="PRASANN Logo"><span><b>PRASANN</b><small>Pure Taste ❤️ Pure Happiness</small></span></a><div class="links"><a href="#home">Home</a><a href="#categories">Categories</a><a href="#menu">Menu</a><a href="#about">Our Story</a></div><button class="btn green" id="openCart">🛒 Cart <span id="count">0</span></button></header>
+<main><section class="hero" id="home"><div class="hero-in"><div><span class="eyebrow">TRADITION • TASTE • TOGETHERNESS</span><h1>हर निवाले में<br><em>खुशियों का स्वाद।</em></h1><p>आपके पसंदीदा भारतीय स्वाद, दिल से तैयार। पारंपरिक भोजन से लेकर चटपटे स्नैक्स और मिठाइयों तक — PRASANN के साथ हर मौका बने खास।</p><div class="actions"><a class="btn green" href="#menu">मेन्यू देखें →</a><a class="btn" style="border:1px solid var(--line);background:white" href="#categories">कैटेगरी चुनें</a></div><span class="muted">✓ पारंपरिक स्वाद　 ✓ आसान WhatsApp ऑर्डर</span></div><img class="hero-img" src="file_0000000050fc81fa87d09165cf3b6474.png" alt="PRASANN मेन्यू की तस्वीर"></div></section>
+<section class="section" id="categories"><div class="heading"><span class="kicker">Explore PRASANN</span><h2>आपकी पसंद, हमारी खासियत</h2><p>अपनी पसंद की कैटेगरी चुनें और स्वाद की दुनिया में आएँ।</p></div><div class="cats"><button class="cat" data-cat="Snacks"><span>🥨</span><b>Snacks</b></button><button class="cat" data-cat="Indian Meals"><span>🍛</span><b>Indian Meals</b></button><button class="cat" data-cat="South Indian Meals"><span>🥞</span><b>South Indian Meals</b></button><button class="cat" data-cat="Fast Food"><span>🍔</span><b>Fast Food</b></button><button class="cat" data-cat="Sweets"><span>🍬</span><b>Sweets</b></button></div></section>
+<section class="menu" id="menu"><div class="section"><div class="menu-top"><div class="heading"><span class="kicker">Made for your cravings</span><h2>हमारा मेन्यू</h2><p>पैक साइज़ या सर्विंग बदलें — कीमत उसी हिसाब से अपडेट होगी।</p></div><input class="search" id="search" placeholder="🔎 खाना खोजें..." aria-label="खाना खोजें"></div><div class="filters" id="filters"><button class="filter active" data-filter="All">सभी</button><button class="filter" data-filter="Snacks">Snacks</button><button class="filter" data-filter="Indian Meals">Indian Meals</button><button class="filter" data-filter="South Indian Meals">South Indian Meals</button><button class="filter" data-filter="Fast Food">Fast Food</button><button class="filter" data-filter="Sweets">Sweets</button></div><div class="products" id="products"></div><p class="note">ज़रूरी: नीचे दिए गए दाम उदाहरण हैं। वेबसाइट लाइव करने से पहले इन्हें अपने सही दाम से बदलें।</p></div></section>
+<section class="story"><h2>स्वाद में परंपरा, अंदाज़ में PRASANN.</h2><p>Pure Taste ❤️ Pure Happiness</p></section>
+<section class="section about" id="about"><div class="about-in"><img src="file_000000001104820bbb8de0c9b70bad8c.png" alt="PRASANN ब्रांड लोगो"><div><span class="kicker">Our Promise</span><h2>स्वाद जो खुशियाँ बाँटे।</h2><p class="muted">अपनी पसंद की चीज़ चुनें, पैक साइज़ और मात्रा तय करें, फिर ऑर्डर WhatsApp पर भेजें। PRASANN — Pure Taste, Pure Happiness.</p></div></div></section>
+<section class="contact section" id="contact"><div class="contact-card"><span class="kicker">We are here for you</span><h2>ऑर्डर करना है?</h2><p class="muted">मेन्यू से चीज़ें कार्ट में जोड़ें और WhatsApp पर ऑर्डर मैसेज तैयार करें।</p><button class="btn green" id="contactCart">कार्ट खोलें 🛒</button></div></section></main>
+<footer class="footer">© <span id="year"></span> PRASANN • Pure Taste ❤️ Pure Happiness</footer>
+<div class="overlay" id="overlay"></div><aside class="drawer" id="drawer"><div class="dhead"><h2>आपका कार्ट 🛒</h2><button class="close" id="close">×</button></div><div class="items" id="items"></div><div class="dfoot"><div class="total"><span>कुल अनुमानित कीमत</span><span id="total">₹0</span></div><input class="field" id="custName" placeholder="आपका नाम (ज़रूरी)"><input class="field" id="custAddress" placeholder="डिलीवरी का पता / पिकअप (ज़रूरी)"><input class="field" id="custNote" placeholder="खास निर्देश (वैकल्पिक)"><button class="checkout" id="checkout">WhatsApp पर ऑर्डर भेजें ↗</button><p class="note">WhatsApp में मैसेज खुलेगा; भेजने के लिए Send दबाएँ।</p></div></aside>
 <script>
-/*
-  IMPORTANT:
-  Replace the number below with your own WhatsApp number.
-  Use country code + number, digits only. Example format for India: 91XXXXXXXXXX
-*/
-const WHATSAPP_NUMBER = "91YOURNUMBER";
-
-function openWhatsApp(message) {
-  if (WHATSAPP_NUMBER.includes("YOURNUMBER")) {
-    alert("Please add your WhatsApp number in the website code first.");
-    return;
-  }
-  const url = "https://wa.me/" + WHATSAPP_NUMBER +
-              "?text=" + encodeURIComponent(message);
-  window.open(url, "_blank");
-}
-
-function orderProduct(selectId) {
-  const size = document.getElementById(selectId).value;
-  openWhatsApp("Hello PRASANN! I would like to order Kaju Shape Snacks, pack size: " + size + ". Please share the price and ordering details.");
-}
-
-function contactWhatsApp() {
-  openWhatsApp("Hello PRASANN! I would like to know more about your snacks.");
-}
-
-document.getElementById("search").addEventListener("input", function () {
-  const query = this.value.trim().toLowerCase();
-  const cards = document.querySelectorAll("#product-list .card");
-  let visible = 0;
-
-  cards.forEach(function (card) {
-    const match = card.dataset.name.toLowerCase().includes(query);
-    card.classList.toggle("hidden", !match);
-    if (match) visible++;
-  });
-
-  document.getElementById("no-results")
-    .classList.toggle("hidden", visible !== 0);
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+/* सेटअप: WHATSAPP_NUMBER में अपना भारतीय नंबर 91 सहित, बिना + और spaces, लिखें.
+   दाम उदाहरण हैं। gramSizes वाले प्रोडक्ट में pricePerKg बदलने पर सभी ग्रामों के दाम अपने-आप बदलेंगे. */
+const WHATSAPP_NUMBER="91YOURNUMBER"; // अपना असली नंबर डालें
+const products=[
+{id:"kaju",name:"Kaju Shape Snacks",cat:"Snacks",emoji:"🥨",desc:"PRASANN का खास काजू-शेप स्नैक।",tag:"PRASANN SPECIAL",gramSizes:[150,300,500,1000],pricePerKg:400},
+{id:"namkeen",name:"Traditional Namkeen",cat:"Snacks",emoji:"🥣",desc:"चाय के साथ चटपटी नमकीन।",tag:"POPULAR",gramSizes:[150,300,500,1000],pricePerKg:300},
+{id:"mixture",name:"Crispy Mixture",cat:"Snacks",emoji:"🥜",desc:"कुरकुरा और चटपटा स्नैक।",tag:"CRUNCHY",gramSizes:[150,300,500,1000],pricePerKg:320},
+{id:"chole",name:"Chole Chawal",cat:"Indian Meals",emoji:"🍛",desc:"मसालेदार छोले और चावल।",tag:"INDIAN FAVOURITE",sizes:[["1 प्लेट",120],["2 प्लेट",230]]},
+{id:"rajma",name:"Rajma Chawal",cat:"Indian Meals",emoji:"🍲",desc:"राजमा और चावल।",tag:"COMFORT FOOD",sizes:[["1 प्लेट",130],["2 प्लेट",250]]},
+{id:"kadhi",name:"Kadhi Chawal",cat:"Indian Meals",emoji:"🥘",desc:"पारंपरिक कढ़ी-चावल।",tag:"TRADITIONAL",sizes:[["1 प्लेट",110],["2 प्लेट",210]]},
+{id:"idli",name:"Idli Sambar",cat:"South Indian Meals",emoji:"🥥",desc:"इडली, सांभर और चटनी।",tag:"SOUTH INDIAN",sizes:[["2 पीस",70],["4 पीस",120]]},
+{id:"dosa",name:"Masala Dosa",cat:"South Indian Meals",emoji:"🥞",desc:"मसाला डोसा, सांभर और चटनी।",tag:"POPULAR",sizes:[["1 डोसा",100],["2 डोसा",190]]},
+{id:"vada",name:"Medu Vada",cat:"South Indian Meals",emoji:"🍩",desc:"कुरकुरा वड़ा, सांभर के साथ।",tag:"CLASSIC",sizes:[["2 पीस",60],["4 पीस",110]]},
+{id:"momos",name:"Veg Momos",cat:"Fast Food",emoji:"🥟",desc:"स्टीम्ड वेज मोमोज़ और चटनी।",tag:"FAST FOOD",sizes:[["6 पीस",80],["10 पीस",125]]},
+{id:"roll",name:"Veg Roll",cat:"Fast Food",emoji:"🌯",desc:"मसालेदार वेज रोल।",tag:"ON THE GO",sizes:[["1 रोल",80],["2 रोल",150]]},
+{id:"burger",name:"Veg Burger",cat:"Fast Food",emoji:"🍔",desc:"सब्ज़ियों और सॉस वाला बर्गर।",tag:"FAVOURITE",sizes:[["1 बर्गर",90],["2 बर्गर",170]]},
+{id:"pizza",name:"Veg Pizza",cat:"Fast Food",emoji:"🍕",desc:"वेज टॉपिंग वाला पिज़्ज़ा।",tag:"CHEESY",sizes:[["Regular",150],["Large",260]]},
+{id:"sandwich",name:"Veg Sandwich",cat:"Fast Food",emoji:"🥪",desc:"ताज़ा वेज सैंडविच।",tag:"LIGHT BITE",sizes:[["1 सैंडविच",70],["2 सैंडविच",130]]},
+{id:"noodles",name:"Veg Noodles",cat:"Fast Food",emoji:"🍜",desc:"चटपटे वेज नूडल्स।",tag:"STREET STYLE",sizes:[["1 प्लेट",100],["2 प्लेट",190]]},
+{id:"laddu",name:"Motichoor Laddu",cat:"Sweets",emoji:"🍡",desc:"त्योहारों और खुशियों की मिठास।",tag:"SWEET MOMENTS",gramSizes:[250,500,1000],pricePerKg:500},
+{id:"barfi",name:"Kaju Barfi",cat:"Sweets",emoji:"🍬",desc:"स्वादिष्ट काजू बर्फ़ी।",tag:"TRADITIONAL",gramSizes:[250,500,1000],pricePerKg:800},
+{id:"gulab",name:"Gulab Jamun",cat:"Sweets",emoji:"🍮",desc:"चाशनी में डूबे गुलाब जामुन।",tag:"SWEET FAVOURITE",sizes:[["2 पीस",50],["4 पीस",95],["6 पीस",140]]}
+];
+const $=id=>document.getElementById(id),money=n=>"₹"+Math.round(n).toLocaleString("en-IN");let filter="All",query="",cart={};
+function sizeList(p){return p.gramSizes?p.gramSizes.map(g=>({label:g>=1000?"1 kg":g+" g",price:Math.round(p.pricePerKg*g/1000)})):p.sizes.map(s=>({label:s[0],price:s[1]}))}
+function selected(p){let el=document.querySelector('[data-size="'+p.id+'"]');return sizeList(p)[el?+el.value:0]}
+function render(){let list=products.filter(p=>(filter==="All"||p.cat===filter)&&(p.name+" "+p.cat+" "+p.desc).toLowerCase().includes(query.toLowerCase()));$("products").innerHTML=list.length?list.map(p=>{let sizes=sizeList(p);return `<article class="product"><div class="foodpic"><span>${p.emoji}</span><b class="tag">${p.tag}</b></div><div class="info"><small>${p.cat}</small><h3>${p.name}</h3><p>${p.desc}</p><select class="size" data-size="${p.id}" aria-label="${p.name} size">${sizes.map((s,i)=>`<option value="${i}">${s.label} — ${money(s.price)}</option>`).join("")}</select>${p.gramSizes?`<div class="note" style="margin:-5px 0 8px">₹${p.pricePerKg}/kg के हिसाब से</div>`:""}<div class="price-row"><span class="price" id="price-${p.id}">${money(sizes[0].price)}</span><button class="add" data-add="${p.id}">+ कार्ट में</button></div></div></article>`}).join(""):'<div class="empty">कोई प्रोडक्ट नहीं मिला। दूसरा नाम खोजें।';}
+function add(id){let p=products.find(x=>x.id===id),s=selected(p),key=id+"|"+s.label;if(!cart[key])cart[key]={id,name:p.name,cat:p.cat,size:s.label,price:s.price,qty:0};cart[key].qty++;drawCart()}
+function drawCart(){let rows=Object.entries(cart).filter(([k,x])=>x.qty>0);$("count").textContent=rows.reduce((a,[k,x])=>a+x.qty,0);$("items").innerHTML=rows.length?rows.map(([k,x])=>`<div class="cartrow"><div><b>${x.name}</b><br><span class="note">${x.cat} • ${x.size} • ${money(x.price)} each</span><div class="qty"><button data-minus="${k}">−</button>${x.qty}<button data-plus="${k}">+</button></div></div><b>${money(x.price*x.qty)}</b></div>`).join(""):'<div class="empty">कार्ट खाली है। मेन्यू से पसंद की चीज़ जोड़ें।</div>';$("total").textContent=money(rows.reduce((a,[k,x])=>a+x.price*x.qty,0))}
+function open(){ $("overlay").classList.add("open");$("drawer").classList.add("open") }function close(){ $("overlay").classList.remove("open");$("drawer").classList.remove("open")}
+$("products").addEventListener("change",e=>{let id=e.target.dataset.size;if(!id)return;let p=products.find(x=>x.id===id);$("price-"+id).textContent=money(selected(p).price)});
+$("products").addEventListener("click",e=>{let b=e.target.closest("[data-add]");if(b)add(b.dataset.add)});
+$("filters").addEventListener("click",e=>{let b=e.target.closest("[data-filter]");if(!b)return;filter=b.dataset.filter;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".cat").forEach(x=>x.classList.toggle("active",x.dataset.cat===filter));render()});
+document.querySelectorAll(".cat").forEach(b=>b.addEventListener("click",()=>{filter=b.dataset.cat;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter===filter));document.querySelectorAll(".cat").forEach(x=>x.classList.toggle("active",x===b));render();$("menu").scrollIntoView({behavior:"smooth"})}));
+$("search").addEventListener("input",e=>{query=e.target.value;render()});$("openCart").onclick=open;$("contactCart").onclick=open;$("close").onclick=close;$("overlay").onclick=close;
+$("items").addEventListener("click",e=>{let p=e.target.closest("[data-plus]"),m=e.target.closest("[data-minus]");if(p)cart[p.dataset.plus].qty++;if(m){cart[m.dataset.minus].qty--;if(cart[m.dataset.minus].qty<=0)delete cart[m.dataset.minus]}drawCart()});
+$("checkout").onclick=()=>{let rows=Object.values(cart).filter(x=>x.qty>0),name=$("custName").value.trim(),address=$("custAddress").value.trim();if(!rows.length){alert("पहले कार्ट में प्रोडक्ट जोड़ें।");return}if(!name||!address){alert("कृपया अपना नाम और डिलीवरी का पता भरें।");return}if(!/^91\\d{10}$/.test(WHATSAPP_NUMBER)){alert("कोड में WHATSAPP_NUMBER की जगह अपना 91 सहित 10 अंकों वाला नंबर डालें।");return}let total=rows.reduce((a,x)=>a+x.price*x.qty,0),msg="नमस्ते PRASANN! 🙏\\nमुझे आपके ये प्रोडक्ट चाहिए:\\n\\n";rows.forEach((x,i)=>msg+=`${i+1}. ${x.name}\\nकैटेगरी: ${x.cat}\\nपैक/साइज़: ${x.size}\\nमात्रा: ${x.qty}\\nकीमत: ${money(x.price*x.qty)}\\n\\n`);msg+=`कस्टमर का नाम: ${name}\\nडिलीवरी का पता / पिकअप: ${address}\\n`;if($("custNote").value.trim())msg+="खास निर्देश: "+$("custNote").value.trim()+"\\n";msg+=`\\nकुल अनुमानित कीमत: ${money(total)}\\nकृपया उपलब्धता और डिलीवरी की पुष्टि करें।\\nधन्यवाद ❤️`;window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank")};
+$("year").textContent=new Date().getFullYear();render();drawCart();
+</script></body></html>
