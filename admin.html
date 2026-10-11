@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRASANN Admin Login</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff8ed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .login {
+      width: 100%;
+      max-width: 380px;
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px #00000012;
+    }
+    h1 { color: #244d32; text-align: center; }
+    p { color: #666; text-align: center; }
+    label { display: block; margin-top: 18px; }
+    input {
+      width: 100%;
+      padding: 13px;
+      margin-top: 7px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 22px;
+      border: 0;
+      border-radius: 8px;
+      background: #244d32;
+      color: white;
+      font-size: 16px;
+    }
+    #message { font-size: 14px; color: #b42318; }
+  </style>
+</head>
+<body>
+  <main class="login">
+    <h1>PRASANN प्रसन्न</h1>
+    <p>Admin Login</p>
+
+    <form id="loginForm">
+      <label for="email">Admin Email</label>
+      <input id="email" type="email" autocomplete="username"
+             placeholder="अपना Admin email डालें" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password"
+             autocomplete="current-password"
+             placeholder="Password डालें" required>
+
+      <button type="submit">Login</button>
+      <p id="message">सुरक्षित लॉगिन सेटअप होना अभी बाकी है।</p>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("message").textContent =
+        "लॉगिन अभी सक्रिय नहीं है। पहले सुरक्षित authentication सेट करना होगा।";
+    });
+  </script>
+</body>
+  </html>
